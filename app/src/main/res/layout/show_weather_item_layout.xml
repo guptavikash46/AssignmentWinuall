@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/cityName"
+            android:text="cityName"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/windSpeed"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="windSpeed"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_toRightOf="@id/cityName"/>
+
+        <TextView
+            android:id="@+id/temperature"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="temperature"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_toRightOf="@id/windSpeed"/>
+
+        <TextView
+            android:id="@+id/pressure"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pressure"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/cityName"/>
+
+        <TextView
+            android:id="@+id/humidity"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="humidity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@id/windSpeed"
+            android:layout_toRightOf="@id/pressure"/>
+
+        <TextView
+            android:id="@+id/weatherDescription"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="weather Description"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@id/pressure"/>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
