@@ -9,7 +9,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {Places.class}, version = 1)
+@Database(entities = {Places.class}, version = 1, exportSchema = false)
 public abstract class PlacesDatabase extends RoomDatabase {
 
     private static PlacesDatabase instance;
@@ -41,11 +41,11 @@ public abstract class PlacesDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            placesDao.insert(new Places("Dortmund"));
-            placesDao.insert(new Places("Frankfurt"));
-            placesDao.insert(new Places("London"));
-            placesDao.insert(new Places("New Delhi"));
-            placesDao.insert(new Places("Mumbai"));
+//            placesDao.insert(new Places("Dortmund"));
+//            placesDao.insert(new Places("Frankfurt"));
+//            placesDao.insert(new Places("London"));
+//            placesDao.insert(new Places("New Delhi"));
+//            placesDao.insert(new Places("Mumbai"));
             return null;
         }
     }

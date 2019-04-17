@@ -31,4 +31,8 @@ public class Places {
     public Places(String placeName) {
         this.placeName = placeName;
     }
+
+    public Places(){
+
+    }
 }

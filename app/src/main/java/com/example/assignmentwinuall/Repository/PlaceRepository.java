@@ -3,9 +3,11 @@ package com.example.assignmentwinuall.Repository;
 import android.app.Application;
 import android.os.AsyncTask;
 
+import com.example.assignmentwinuall.MainActivity;
 import com.example.assignmentwinuall.Model.Places;
 import com.example.assignmentwinuall.Model.PlacesDao;
 import com.example.assignmentwinuall.Model.PlacesDatabase;
+import com.example.assignmentwinuall.ShowWeatherData;
 
 import java.util.List;
 
@@ -13,7 +15,6 @@ import androidx.lifecycle.LiveData;
 
 public class PlaceRepository {
     private PlacesDao placesDao;
-
     private LiveData<List<Places>> allPlaces;
 
     public PlaceRepository(Application application){
@@ -31,6 +32,7 @@ public class PlaceRepository {
     public void deleteAll(){
         new DeleteAllPlacesAsyncTask(placesDao).execute();
     }
+
     public LiveData<List<Places>> getAllPlaces() {
         return allPlaces;
     }
@@ -74,5 +76,4 @@ public class PlaceRepository {
             return null;
         }
     }
-
 }

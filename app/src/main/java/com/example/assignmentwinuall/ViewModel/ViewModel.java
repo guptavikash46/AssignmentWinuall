@@ -11,11 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-public class PlacesViewModel extends AndroidViewModel {
+public class ViewModel extends AndroidViewModel {
     private PlaceRepository placeRepository;
     private LiveData<List<Places>> allPlaces;
 
-    public PlacesViewModel(@NonNull Application application) {
+    public ViewModel(@NonNull Application application) {
         super(application);
         placeRepository = new PlaceRepository(application);
         allPlaces = placeRepository.getAllPlaces();
@@ -34,4 +34,6 @@ public class PlacesViewModel extends AndroidViewModel {
     public LiveData<List<Places>> getAllPlaces(){
         return allPlaces;
     }
+
+
 }

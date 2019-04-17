@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginTop="8dp">
+    android:layout_height="wrap_content">
 
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal">
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/cityNameCard"
+        android:layout_marginTop="8dp">
 
         <TextView
             android:id="@+id/cityName"
@@ -22,6 +23,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/windSpeedCard"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_below="@id/cityNameCard"
+        android:layout_marginTop="8dp">
+
         <TextView
             android:id="@+id/windSpeed"
             android:padding="8dp"
@@ -29,8 +43,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="windSpeed"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_toRightOf="@id/cityName"/>
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/temperatureCard"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_below="@id/windSpeedCard"
+        android:layout_marginTop="8dp">
 
         <TextView
             android:id="@+id/temperature"
@@ -41,6 +66,17 @@
             android:text="temperature"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_toRightOf="@id/windSpeed"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pressureCard"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_below="@id/temperatureCard"
+        android:layout_marginTop="8dp">
 
         <TextView
             android:id="@+id/pressure"
@@ -52,6 +88,18 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_alignParentLeft="true"
             android:layout_below="@id/cityName"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/humidityCard"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_below="@id/pressureCard"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
 
         <TextView
             android:id="@+id/humidity"
@@ -63,17 +111,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_below="@id/windSpeed"
             android:layout_toRightOf="@id/pressure"/>
-
-        <TextView
-            android:id="@+id/weatherDescription"
-            android:padding="8dp"
-            android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="weather Description"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_below="@id/pressure"/>
-    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 
-</androidx.cardview.widget.CardView>
+</RelativeLayout>

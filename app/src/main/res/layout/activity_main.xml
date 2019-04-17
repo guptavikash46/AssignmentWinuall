@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/submitButton"
-        android:text="Few suggestions to get you started quickly:"/>
+        android:text="Your searched history:"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainActivityRecyclerView"

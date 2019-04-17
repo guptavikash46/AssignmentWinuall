@@ -22,4 +22,11 @@ public interface PlacesDao {
 
     @Query("SELECT *FROM Places ORDER BY Id")
     LiveData<List<Places>> getAllPlaces();
+
+    @Query("SELECT *FROM Places WHERE placeName LIKE :placeName")
+    List<Places> getplace(String placeName);
+
+    @Query("SELECT *FROM Places ORDER BY Id")
+    List<Places> getAllPlacesinMainActivity();
+
 }
