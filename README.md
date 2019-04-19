@@ -1,4 +1,4 @@
-# AssignmentWinuall
+# Weather app
 Androidx
 
 Few changes with respect to android package naming structure was introduced by google. Most of the dependencies have been 
